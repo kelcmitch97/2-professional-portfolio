@@ -6,13 +6,19 @@
 
 body {
     font-family: 'Spartan', sans-serif;
-    color: rgb(83, 81, 93);
+    color: var(--color1);
+}
+
+:root {
+    --color1: rgb(83, 81, 93);
+    --color2: rgb(147, 179, 176);
+
 }
 
 /* HEADER STYLE START */
 header {
     padding: 20px 35px;
-    background-color:rgb(147, 179, 176);
+    background-color: var(--color2);
 }
 
 header h1 {
@@ -42,4 +48,27 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.2vw;
     margin: 0 30px;
+}
+
+/* HERO STYLE */
+
+.heroimage{
+    height: 400px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url(./images/heroimage.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.herotext {   
+    text-align: right;
+    color: white;
+    background-color: var(--color1);
+    position: absolute; 
+    bottom: 8px;
+    right: 16px;
+    padding: 10px;
 }
