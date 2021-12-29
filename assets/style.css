@@ -6,6 +6,40 @@
 
 body {
     font-family: 'Spartan', sans-serif;
-  
+    color: rgb(83, 81, 93);
 }
 
+/* HEADER STYLE START */
+header {
+    padding: 20px 35px;
+    background-color:rgb(147, 179, 176);
+}
+
+header h1 {
+    font-weight: bold; 
+    font-size: 36px;
+    color: white;
+    margin: 0;
+    display: inline;
+}
+
+header a {
+    text-decoration: underline;
+    color: white;
+}
+
+header nav {
+    float: right;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.2vw;
+    margin: 0 30px;
+}
