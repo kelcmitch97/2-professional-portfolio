@@ -12,7 +12,6 @@ body {
 :root {
     --color1: rgb(83, 81, 93);
     --color2: rgb(147, 179, 176);
-
 }
 
 /* HEADER STYLE START */
@@ -72,3 +71,54 @@ header nav ul li a {
     right: 16px;
     padding: 10px;
 }
+
+/* ABOUT ME STYLE*/
+
+#about-me, #work, #contact-me {
+    display: flex;
+}
+
+.about-me-column, .work-column {
+    flex: 50%;
+}
+
+/* MAIN CONTENT STYLE */
+
+.main-text {
+    text-align: right;
+    font-size: 36px;
+    font-weight: bold;
+    border-right: 5px solid var(--color1);
+    padding: 20px 20px 20px 80px;
+    margin: 10px 0;
+}
+
+.about-me-text {
+    padding: 20px 20px 20px 40px;
+}
+
+/* FOOTER STYLE */
+
+footer a {
+    text-decoration: underline;
+    color: var(--color1);
+}
+
+footer nav {
+    float: right;
+    margin: 60px 0;
+    width: 100%;
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li a {
+    padding: 20px 20px 20px 40px;
+    font-weight: lighter;
+    font-size: 1.2vw;
+    margin: 10px 30px;
+    justify-content: center;
+}
+
