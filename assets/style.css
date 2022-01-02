@@ -70,100 +70,176 @@ header nav ul li a {
     bottom: 8px;
     right: 16px;
     padding: 10px;
+    opacity: .95;
 }
 
-/* MAIN CONTENT STYLE */
+/* MAIN CONTENT CONTAINER STYLE */
 
 .main-content {
-    margin: 15px;
-}
-
-#about-me, #work, #contact-me {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.column1 {
-    width: 20%;
+    padding: 2%;
     margin: 10px;
 }
 
-.column2 {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 5px 20px;
-    margin: 10px;
-    border-left: 5px solid var(--color1);
+.main-header {
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px 10px;
+    width: 50%;
 }
 
-.main-text {
-    text-align: right;
-    font-size: 36px;
-    font-weight: bold;
-    width: 300px;
-    margin: 10px 0;
-    padding: 0 10px;
-   
+.about-me-section {
+    background-color: lightpink;
+    margin-bottom: 20px;
 }
 
-.about-me-text, .column-text{
-    justify-content: flex-start;
-    
+.work-section {
+    background-color: lightcoral;
+    margin-bottom: 20px;
 }
-/* WORK GRID LAYOUT STYLE */
 
-.work1 {grid-area: project1;}
-.work2 {grid-area: project2;}
-.work3 {grid-area: project3;}
-.work4 {grid-area: project4;}
-.work5 {grid-area: project5;}
+.contact-me-section {
+    background-color: lightblue;
+    margin-bottom: 20px;
+}
 
-.work-grid-container {
-    display: grid;
-    grid-area: images;
-    grid-template-areas: 
-            'project1 project1'
-            'project2 project3'
-            'project4 project5';
-    grid-gap: 10px;
-    background-color: var(--color2);
+.about-me-section-right {
+    text-align: center;
     padding: 10px;
 }
+.work-section-right {
+    text-align: center;
+    padding-bottom: 10px;
+}
 
-.work-grid-container > div {
-    width: 100%;
+.work-project1 {
+    background-image: url(./images/Horiseon.png);
     height: 200px;
-}
-
-.work-grid-container img {
     width: 100%;
-    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
-/* FOOTER STYLE */
-
- .contact-content a {
-    text-decoration: underline;
-    color: var(--color1);
-}
-
-.contact-content nav {
-    float: right;
-    margin: 60px 0;
+.work-project2 {
+    background-image: url(./images/Run\ Buddy.png);
+    height: 200px;
     width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.contact-content nav ul li {
+.work-project3 {
+    background-image: url(./images/heroimage.jpeg);
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.work-project-title1, .work-project-title2, .work-project-title3 {
+    background-color: var(--color2);
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    padding: 10px;
+    z-index: 999;
+}
+
+.work-project-subtitle1, .work-project-subtitle2, .work-project-subtitle3 {
+    background-color: var(--color2);
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    padding: 10px;
+    z-index: 999;
+}
+
+.work-project-subtitle1 {
+    bottom: 10px;
+    right: 20px;
+}
+
+.work-project-subtitle2 {
+    bottom: 10px;
+    right: 20px;
+}
+
+.work-project-subtitle3 {
+    bottom: 10px;
+    right: 20px;
+}
+
+.contact-me-section-right {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.contact-me-section-right nav ul li  {
+    list-style-type: none;
     display: inline;
 }
 
-.contact-content nav ul li a {
-    padding: 20px 20px 20px 40px;
-    font-weight: lighter;
-    font-size: 1.2vw;
-    margin: 10px 30px;
-    justify-content: center;
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 980px) {
+
 }
 
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 575px) {
+   
+     header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .heroimage {
+        width: 100%;
+    }
+   
+    .about-me-section, .work-section, .contact-me-section{
+       display:flex;
+   }
+
+   .about-me-section-left, .work-section-left, .contact-me-section-left {
+       width: 25%;
+       border-right: 3px solid var(--color1);
+   }
+
+   .main-header {
+       text-align: right;
+      
+   }
+
+   .about-me-section-right, .work-section-right, .contact-me-section-right {
+    padding: 10px;
+}
+.contact-me-section-right nav ul li  {
+    display: inline;
+    
+}
+   
+    
+}
