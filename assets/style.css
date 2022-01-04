@@ -12,20 +12,24 @@ body {
 :root {
     --color1: rgb(83, 81, 93);
     --color2: rgb(147, 179, 176);
+    --color3: rgb(253, 230, 224);
 }
 
-/* HEADER STYLE START */
+/* Header Section  */
 header {
     padding: 20px 35px;
     background-color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 header h1 {
     font-weight: bold; 
-    font-size: 36px;
+    font-size: 26px;
     color: white;
     margin: 0;
-    display: inline;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 header a {
@@ -34,22 +38,32 @@ header a {
 }
 
 header nav {
-    float: right;
     margin: 7px 0;
 }
 
-header nav ul li {
-    display: inline;
+header nav ul  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.2vw;
-    margin: 0 30px;
+    font-size: 1.4vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* HERO STYLE */
+header nav ul li a:hover {
+    background: var(--color3);
+    color: var(--color1);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+/* Hero Section  */
 
 .heroimage{
     height: 400px;
@@ -59,145 +73,147 @@ header nav ul li a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
+.heroimage img {
+    height: 300px;
+    margin-left: 30px;
+    border-radius: 15px;
+}
 .herotext {   
     text-align: right;
     color: white;
-    background-color: var(--color1);
-    position: absolute; 
-    bottom: 8px;
-    right: 16px;
-    padding: 10px;
-    opacity: .95;
+    margin: 3.5%;
+    width: 35%;
+    line-height: 1.2;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.herotext h2 {
+    font-style: italic;
+    font-size: 30px;
+    color: var(--color1);
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* MAIN CONTENT CONTAINER STYLE */
 
-.main-content {
-    padding: 2%;
-    margin: 10px;
+article {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .main-header {
-    margin: auto;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 20px;
-    padding: 20px 10px;
-    width: 50%;
-}
-
-.about-me-section {
-    background-color: lightpink;
-    margin-bottom: 20px;
-}
-
-.work-section {
-    background-color: lightcoral;
-    margin-bottom: 20px;
-}
-
-.contact-me-section {
-    background-color: lightblue;
-    margin-bottom: 20px;
-}
-
-.about-me-section-right {
-    text-align: center;
-    padding: 10px;
-}
-.work-section-right {
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.work-project1 {
-    background-image: url(./images/Horiseon.png);
-    height: 200px;
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.left-section {
+    position: relative;
+    width: 20%;
+    height: 200px;
+    display: inline-flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.right-section {
+    position: relative;
+    width: 80%;
+    display: inline-flex;
+    justify-content: flex-start;
+    border-left: 3px solid var(--color1);
+    overflow: hidden; /*maybe change*/
+    padding: 30px;
+}
+
+.right-section:nth-child(odd) {
+    border-right: 3px solid var(--color1);
+    border-left: 0;
+}
+
+/* Work Project Section */
+
+.work-image {
+    width: 100%;
     position: relative;
 }
 
-.work-project2 {
-    background-image: url(./images/Run\ Buddy.png);
+.work-image img {
+    width: 100px;
     height: 200px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
 }
 
-.work-project3 {
-    background-image: url(./images/heroimage.jpeg);
-    height: 200px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.work-projects {
+    display: flex; 
+    flex-wrap: wrap;
+    height: 600px;
 }
 
-.work-project-title1, .work-project-title2, .work-project-title3 {
-    background-color: var(--color2);
-    color: white;
-    font-size: 20px;
+.work-project-title {
     position: absolute;
+    top: 40px;
+    left: 120px;
+    background: var(--color2);
+    width: 200px;
+    z-index: 9999;
     padding: 10px;
-    z-index: 999;
 }
 
-.work-project-subtitle1, .work-project-subtitle2, .work-project-subtitle3 {
-    background-color: var(--color2);
-    color: white;
-    font-size: 15px;
-    position: absolute;
+.work-project-subtitle p {
     padding: 10px;
-    z-index: 999;
 }
 
-.work-project-subtitle1 {
-    bottom: 10px;
-    right: 20px;
+.article-spacer {
+    width: 100%;
+    height: 40px;
 }
 
-.work-project-subtitle2 {
-    bottom: 10px;
-    right: 20px;
-}
+/* Contact Me Section */
 
-.work-project-subtitle3 {
-    bottom: 10px;
-    right: 20px;
-}
-
-.contact-me-section-right {
-    text-align: center;
-    padding-bottom: 10px;
-}
-.contact-me-section-right nav ul li  {
+.contact-text li {
     list-style-type: none;
-    display: inline;
+    display: inline-flex;
 }
 
-
-
-/* MEDIA QUERY */
-
-@media screen and (max-width: 980px) {
-
+.contact-text a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 26px;
+    margin: 0 30px;
+    color: var(--color1);
+}
+.contact-text {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 26px;
 }
 
+/* Media Query */
+
+/* for Tablets screens and smaller */
 @media screen and (max-width: 768px) {
-
+    .herotext h2 {
+        font-size: 20px;
+    }
+    .herotext img {
+        height: 250px;
+    }
 }
 
-@media screen and (min-width: 575px) {
+@media screen and (max-width: 575px) {
    
-     header {
+     /* header {
         padding-bottom: 0;
         justify-content: center;
         position: relative;
@@ -226,6 +242,7 @@ header nav ul li a {
    .about-me-section-left, .work-section-left, .contact-me-section-left {
        width: 25%;
        border-right: 3px solid var(--color1);
+       position: relative;    
    }
 
    .main-header {
@@ -239,7 +256,7 @@ header nav ul li a {
 .contact-me-section-right nav ul li  {
     display: inline;
     
-}
+} */
    
     
 }
