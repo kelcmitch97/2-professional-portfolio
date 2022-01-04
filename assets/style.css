@@ -105,7 +105,7 @@ header nav ul li a:hover {
 /* MAIN CONTENT CONTAINER STYLE */
 
 article {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     width: 100%;
 }
@@ -120,7 +120,7 @@ article {
     position: relative;
     width: 20%;
     height: 200px;
-    display: inline-flex;
+    display: flex;
     justify-content: flex-start;
     overflow: hidden;
 }
@@ -128,7 +128,8 @@ article {
 .right-section {
     position: relative;
     width: 80%;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     border-left: 3px solid var(--color1);
     overflow: hidden; /*maybe change*/
@@ -156,17 +157,54 @@ article {
 .work-projects {
     display: flex; 
     flex-wrap: wrap;
-    height: 600px;
+    flex-direction: column;
+    width: 100%;
+    
+    justify-content: center;
 }
 
-.work-project-title {
+.work-project1 {
+    display: flex;
+}
+
+.work-project2, .work-project3 {
+    display: flex;
+    width: 50%;
+    margin-right: 5px;
+}
+
+.project-wrapper {
+    display: flex;
+}
+
+.work-project-title1 {
     position: absolute;
-    top: 40px;
-    left: 120px;
+    top: 117px;
+    left: 36px;
     background: var(--color2);
-    width: 200px;
+    width: 120px;
     z-index: 9999;
-    padding: 10px;
+    padding: 5px;
+}
+
+.work-project-title2 {
+    position: absolute;
+    top: 340px;
+    left: 36px;
+    background: var(--color2);
+    width: 120px;
+    z-index: 9999;
+    padding: 5px;
+}
+
+.work-project-title3 {
+    position: absolute;
+    top: 340px;
+    left: 390px;
+    background: var(--color2);
+    width: 120px;
+    z-index: 9999;
+    padding: 5px;
 }
 
 .work-project-subtitle p {
